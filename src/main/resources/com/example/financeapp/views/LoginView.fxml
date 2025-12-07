@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.financeapp.controllers.LoginController"
+            prefWidth="420" prefHeight="640"
+            styleClass="background-gradient">
+
+    <VBox alignment="TOP_CENTER" spacing="20" maxWidth="360"
+          AnchorPane.topAnchor="40"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0">
+
+        <!-- App Icon -->
+        <ImageView fitWidth="60" preserveRatio="true">
+            <Image url="@../icons/app_icon.png"/>
+        </ImageView>
+
+        <Label text="FinanceTracker" styleClass="title"/>
+        <Label text="Manage your money with ease" styleClass="subtitle"/>
+
+        <!-- Login Card -->
+        <VBox spacing="20" styleClass="auth-card" alignment="CENTER" maxWidth="360">
+
+            <!-- Email or Username -->
+            <HBox spacing="12" alignment="CENTER_LEFT" styleClass="input-field" maxWidth="Infinity">
+                <ImageView fitHeight="20" preserveRatio="true">
+                    <Image url="@../icons/mail.png"/>
+                </ImageView>
+                <TextField fx:id="emailField"
+                           promptText="Email or username"
+                           HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <!-- Password -->
+            <HBox spacing="12" alignment="CENTER_LEFT" styleClass="input-field" maxWidth="Infinity">
+                <ImageView fitHeight="22" preserveRatio="true">
+                    <Image url="@../icons/lock.png"/>
+                </ImageView>
+                <PasswordField fx:id="passwordField"
+                               promptText="Password"
+                               HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <!-- Remember me + Forgot password -->
+            <HBox spacing="10" alignment="CENTER_LEFT" maxWidth="300">
+                <CheckBox fx:id="rememberMeCheckBox"/>
+                <Label text="Remember me"/>
+
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Hyperlink text="Forgot password?"
+                           onAction="#handleForgotPassword"/>
+            </HBox>
+
+            <!-- Sign In Button -->
+            <Button text="Sign In"
+                    fx:id="loginBtn"
+                    onAction="#handleLogin"
+                    styleClass="primary-btn"
+                    maxWidth="Infinity"/>
+
+            <!-- Switch to SignUp -->
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="Don’t have an account?"/>
+                <Hyperlink text="Sign Up" onAction="#handleGoToSignUp"/>
+            </HBox>
+
+            <!-- Divider -->
+            <Label text="Or continue with" styleClass="divider-label"/>
+
+            <!-- Social Buttons -->
+            <HBox alignment="CENTER" spacing="12" maxWidth="300">
+
+                <!-- Google -->
+                <Button styleClass="social-btn" prefWidth="140" onAction="#handleGoogleLogin">
+                    <graphic>
+                        <HBox alignment="CENTER" spacing="8">
+                            <ImageView fitHeight="18" preserveRatio="true">
+                                <Image url="@../icons/google.png"/>
+                            </ImageView>
+                            <Label text="Google"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+
+                <!-- Apple -->
+                <Button styleClass="social-btn" prefWidth="140" onAction="#handleAppleLogin">
+                    <graphic>
+                        <HBox alignment="CENTER" spacing="8">
+                            <ImageView fitHeight="20" preserveRatio="true">
+                                <Image url="@../icons/apple.png"/>
+                            </ImageView>
+                            <Label text="Apple"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+
+            </HBox>
+
+        </VBox>
+
+    </VBox>
+
+</AnchorPane>
