@@ -1,0 +1,4 @@
+com/kosi/financetracker/backend/service/EmailServiceTest.class
+com/kosi/financetracker/backend/BackendApplicationTests.class
+com/kosi/financetracker/backend/model/BudgetTest.class
+com/kosi/financetracker/backend/service/TwoFactorAuthServiceTest.class
