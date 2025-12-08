@@ -8,6 +8,10 @@
     <groupId>com.example.financeapp</groupId>
     <artifactId>FinanceApp</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>frontend-web</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
