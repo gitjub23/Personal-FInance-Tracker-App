@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.PieChart?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.financeapp.controllers.DashboardController"
+            prefWidth="420" prefHeight="760"
+            styleClass="background-gradient">
+
+    <!-- ================= HEADER ================= -->
+    <top>
+        <VBox spacing="4">
+            <padding>
+                <Insets top="20" right="20" bottom="10" left="20"/>
+            </padding>
+
+            <Label text="Dashboard" styleClass="title"/>
+            <Label text="Overview of your finances" styleClass="subtitle"/>
+        </VBox>
+    </top>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <center>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="10" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Summary Cards -->
+            <HBox spacing="15" alignment="CENTER">
+                <!-- Income -->
+                <VBox spacing="5" alignment="CENTER" prefWidth="110" styleClass="summary-card">
+                    <Label text="Income" styleClass="summary-label"/>
+                    <Label fx:id="incomeLabel" text="0" styleClass="income-text"/>
+                </VBox>
+
+                <!-- Expense -->
+                <VBox spacing="5" alignment="CENTER" prefWidth="110" styleClass="summary-card">
+                    <Label text="Expense" styleClass="summary-label"/>
+                    <Label fx:id="expenseLabel" text="0" styleClass="expense-text"/>
+                </VBox>
+
+                <!-- Balance -->
+                <VBox spacing="5" alignment="CENTER" prefWidth="110" styleClass="summary-card">
+                    <Label text="Balance" styleClass="summary-label"/>
+                    <Label fx:id="balanceLabel" text="0" styleClass="balance-text"/>
+                </VBox>
+            </HBox>
+
+            <!-- Budget alerts section -->
+            <VBox fx:id="budgetAlertsContainer" spacing="4" prefWidth="Infinity">
+                <!-- will be filled in by controller -->
+            </VBox>
+
+            <!-- Recent Transactions Label -->
+            <Label text="Recent Transactions" styleClass="section-title"/>
+
+            <!-- Scrollable List -->
+            <ScrollPane fitToWidth="true" prefHeight="260" styleClass="no-scrollbar">
+                <VBox fx:id="recentTransactionsContainer"
+                      spacing="12"
+                      alignment="TOP_CENTER">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                </VBox>
+            </ScrollPane>
+
+            <!-- Spending breakdown -->
+            <Label text="Spending Breakdown" styleClass="section-title"/>
+
+            <PieChart fx:id="categoryChart" prefHeight="180"/>
+
+        </VBox>
+    </center>
+
+
+    <!-- ================= BOTTOM NAVIGATION ================= -->
+    <bottom>
+        <fx:include source="BottomNav.fxml" fx:id="bottomNav"/>
+    </bottom>
+
+
+</BorderPane>

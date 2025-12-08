@@ -1,0 +1,261 @@
+/* ===== Global Background ===== */
+.background-gradient {
+    -fx-background-color: linear-gradient(to bottom right, #eef3ff, #ffffff);
+}
+
+/* ===== Auth Card ===== */
+.auth-card {
+    -fx-background-color: white;
+    -fx-padding: 25 30 30 30;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0, 0, 5);
+}
+
+/* ===== Titles & Text ===== */
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #666;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* ===== Tabs (on auth screen) ===== */
+.tab-container {
+    -fx-background-color: #eeeeee;
+    -fx-background-radius: 30;
+    -fx-padding: 3;
+}
+
+.tab-active {
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20;
+}
+
+.tab-inactive {
+    -fx-background-color: transparent;
+    -fx-padding: 8 20;
+}
+
+/* ===== Inputs & Buttons ===== */
+.input-field {
+    -fx-background-color: #f3f3f3;
+    -fx-background-radius: 12;
+    -fx-padding: 10;
+}
+
+.primary-btn {
+    -fx-background-color: #000820;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-padding: 12 0;
+}
+
+.secondary-btn {
+    -fx-background-color: #e4e6eb;
+    -fx-text-fill: #333;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-padding: 10 0;
+}
+
+.social-btn {
+    -fx-background-color: #f6f6f6;
+    -fx-background-radius: 10;
+    -fx-padding: 10 18;
+}
+
+.field-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.divider-label {
+    -fx-text-fill: #777;
+    -fx-font-size: 12px;
+}
+
+.notes-area {
+    -fx-background-color: #f5f5f5;
+    -fx-background-radius: 12;
+    -fx-padding: 10;
+    -fx-border-color: transparent;
+}
+
+/* ===== ScrollPane (no visible scrollbar) ===== */
+.no-scrollbar {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.no-scrollbar .viewport {
+    -fx-background-color: transparent;
+}
+
+.no-scrollbar .scroll-bar {
+    -fx-opacity: 0;
+    -fx-pref-width: 0;
+}
+
+/* ===== Transaction Card ===== */
+.transaction-card {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 15;
+    -fx-spacing: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);
+}
+
+.transaction-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.transaction-category {
+    -fx-font-size: 12px;
+    -fx-background-color: #e6e8ef;
+    -fx-background-radius: 10;
+    -fx-padding: 2 8;
+    -fx-text-fill: #555;
+}
+
+.amount-income {
+    -fx-text-fill: #0a8a31;
+    -fx-font-weight: bold;
+}
+
+.amount-expense {
+    -fx-text-fill: #d22;
+    -fx-font-weight: bold;
+}
+
+.add-transaction-btn {
+    -fx-background-color: #000820;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-background-radius: 18;
+    -fx-padding: 10 20;
+}
+
+/* ===== Summary Cards ===== */
+.summary-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 15 10 15 10;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);
+}
+
+.summary-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #666;
+}
+
+.income-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: #0A8F08;
+    -fx-font-weight: bold;
+}
+
+.expense-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: #C62828;
+    -fx-font-weight: bold;
+}
+
+.balance-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: #1565C0;
+    -fx-font-weight: bold;
+}
+
+/* ===== Floating Add Button ===== */
+.floating-add-btn {
+    -fx-background-color: #4285F4;
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-background-radius: 50%;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.2), 12, 0, 0, 3);
+}
+
+/* ===== Bottom Navigation Bar ===== */
+.bottom-nav {
+    -fx-background-color: white;
+    -fx-padding: 10 0 10 0;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Each nav item (VBox) */
+.nav-item {
+    -fx-alignment: center;
+    -fx-spacing: 4;
+    -fx-padding: 6 0 4 0;
+    -fx-background-radius: 16;
+    -fx-cursor: hand;
+}
+
+.nav-item:hover {
+    -fx-background-color: #f1f3f7;
+    -fx-opacity: 0.9;
+}
+
+/* Icon + label text */
+.nav-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #666;
+}
+
+/* ===== ACTIVE NAV ITEM ===== */
+.nav-active {
+    -fx-background-color: rgba(66, 133, 244, 0.18);   /* noticeable pill */
+    -fx-background-radius: 16;
+}
+
+.nav-active .nav-label {
+    -fx-text-fill: #000820;
+    -fx-font-weight: bold;
+}
+
+/* ===== Pie Chart per-category colors ===== */
+/* Each slice gets: .chart-pie + .pie-<category> */
+
+.chart-pie.pie-food {
+    -fx-pie-color: #FF6B6B;
+}
+
+.chart-pie.pie-transport,
+.chart-pie.pie-transportation {
+    -fx-pie-color: #4ECDC4;
+}
+
+.chart-pie.pie-entertainment {
+    -fx-pie-color: #FFD93D;
+}
+
+.chart-pie.pie-bills {
+    -fx-pie-color: #1A535C;
+}
+
+.chart-pie.pie-health {
+    -fx-pie-color: #FF9F1C;
+}
+
+.chart-pie.pie-shopping {
+    -fx-pie-color: #9B5DE5;
+}
+
+.chart-pie.pie-others,
+.chart-pie.pie-other {
+    -fx-pie-color: #A0A0A0;
+}
